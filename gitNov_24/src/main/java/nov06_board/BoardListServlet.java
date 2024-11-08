@@ -52,7 +52,7 @@ class BoardListDAO {
 	PreparedStatement pstmt;
 	ResultSet rs;
 	ArrayList<BoardDTO> al;
-	String query = "select id, title, content, to_char(white_date, 'YYYY/MM/DD HH24:MI:SS') from free_board";
+	String query = "select id, title, content, to_char(write_date, 'YYYY/MM/DD HH24:MI:SS') from free_board";
 	
 	ArrayList<BoardDTO> doit() {
 		try {
