@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body onload="showRand()">
+<script type="text/javascript">
+function makeRand(){
+	var r = parseInt(Math.random() * 10);
+	return r;
+}
+function showRand(){
+	var str = ""+makeRand()+makeRand()+makeRand()+makeRand()+makeRand();
+	document.getElementById("temp").innerHTML = str;
+}
+function reMake(){
+	location.reload();//현재 창을 갱신한다.	
+}
+</script>
+당신의 임시 암호는 <span id="temp"></span>입니다.<br/>
+<input type="button" value="다시 받기" onclick="reMake()"/>
+<input type="button" value="닫기" onclick="window.close()"/>
+</body>
+</html>
+
+
+
+
+
+
+
+
