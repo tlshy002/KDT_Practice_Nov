@@ -87,12 +87,9 @@ class NoticeWriteDAO {
 			pstmt.setString(3, dto.getContent());
 			pstmt.setString(4, dto.getWriter());
 			
-			rs = pstmt.executeQuery();
+			pstmt.executeUpdate();//insert  실행
+			result = true;
 			
-			
-			if(rs.next()) {
-			} else {
-			}
 		} catch(Exception e) {
 			System.out.println("공지사항 등록 중 문제발생!");
 		} finally {
