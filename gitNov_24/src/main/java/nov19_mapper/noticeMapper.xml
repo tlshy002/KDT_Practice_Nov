@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="noticeMapper">
+	<update id="updateNotice" parameterType="notice.NoticeDTO">
+		update notice_tbl set title = #{title}, 
+		content = #{content} where num = #{num}
+	</update>
+	<delete id="deleteNotice" parameterType="Integer">
+		delete from notice_tbl where num = #{num}
+	</delete>
+
+</mapper>
